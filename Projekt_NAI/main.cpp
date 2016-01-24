@@ -10,13 +10,13 @@ int main(){
 	VideoCapture cap;
 	cap.open(0);
 
-	namedWindow("window1",1);
+	namedWindow("window",1);
 
 	while(1){
 
 		cap>>image;
 
-		imshow("window1", image);
+		imshow("window", image);
 
 		waitKey(33);
 
