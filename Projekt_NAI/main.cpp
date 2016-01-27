@@ -1,26 +1,20 @@
-#include<opencv\cv.h>
-#include<opencv\highgui.h>
+#include <iostream>
+#include <opencv2\opencv.hpp>
+#include <opencv2\core\core.hpp>
+#include <opencv2\imgproc\imgproc.hpp>
+#include <opencv2\highgui\highgui.hpp>
+#include <conio.h>
 
 using namespace cv;
+using namespace std;
 
-int main(){
 
-	Mat image;
+ int main( int argc, char** argv )
+ {
+	
 
-	VideoCapture cap;
-	cap.open(0);
-
-	namedWindow("window",1);
-
-	while(1){
-
-		cap>>image;
-
-		imshow("window", image);
-
-		waitKey(33);
-
-	}
+   VideoCapture cap("rtsp://admin:12345@10.133.4.54//Streaming/Channels/2");       
+	
+   
 
 }
-
