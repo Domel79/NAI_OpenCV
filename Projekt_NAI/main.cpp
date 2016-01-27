@@ -7,14 +7,28 @@
 
 using namespace cv;
 using namespace std;
+Mat frame;
 
 
  int main( int argc, char** argv )
  {
 	
 
-   VideoCapture cap("rtsp://admin:12345@10.133.4.54//Streaming/Channels/2");       
-	
+   VideoCapture cap("rtsp://admin:12345@10.133.4.54//Streaming/Channels/2");
+   if (!cap.isOpened())
+   {
+	   cout << "Cannot open the web cam" << endl;
+	   return -1;
+    }
+    
+   while(waitKey(30)!=27){
+	  cap>>frame;
+	  namedWindow("oryginal", WINDOW_AUTOSIZE );
+		imshow("oryginal",frame);
+   }
+  
+
+   return 0;
    
 
 }
