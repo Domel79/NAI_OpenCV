@@ -10,7 +10,7 @@ using namespace std;
 
 Mat frame, imgTemp, tmpFrame, tmpFrame2;
 
-BackgroundSubtractorMOG2 bg(100, 100, false);
+BackgroundSubtractorMOG2 bg(100, 250, false);
 
  int main( int argc, char** argv )
  {	
@@ -34,7 +34,7 @@ BackgroundSubtractorMOG2 bg(100, 100, false);
 	  findContours(tmpFrame, contours,CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 	  drawContours(frame,contours, -1,cv::Scalar(255,0,0),2);
 	  
-	  namedWindow("oryginal", WINDOW_AUTOSIZE );
+	  namedWindow("oryginal.", WINDOW_AUTOSIZE );
 		imshow("oryginal",frame);
    }
   
