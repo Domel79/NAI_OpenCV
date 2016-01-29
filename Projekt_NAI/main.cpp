@@ -34,7 +34,7 @@ BackgroundSubtractorMOG2 bg(50, 200, false);
 	  findContours(tmpFrame, contours,CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 	  drawContours(frame,contours, -1,cv::Scalar(255,0,0),2); 
 
-	  	if(contours.size() > 200 ){
+	  	if(contours.size() > 20){
 			cout<<"Wykryto ruch \n";
 		}
 	  
