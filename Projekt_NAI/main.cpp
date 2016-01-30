@@ -16,6 +16,8 @@ BackgroundSubtractorMOG2 bg(50, 200, false);
  {	
 
    VideoCapture cap("rtsp://admin:12345@10.133.4.54//Streaming/Channels/2");
+  // VideoCapture cap("e:/Maly_ruch.avi");
+
    if (!cap.isOpened())
    {
 	   cout << "Cannot open the web cam" << endl;
